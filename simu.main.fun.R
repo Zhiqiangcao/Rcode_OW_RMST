@@ -5,7 +5,7 @@ library(survival)
 library(mvtnorm)
 
 #input source code
-source("C:/Users/82655/Dropbox/research/ow/R_code/new_simu/github_code/RMST.functions.R")
+source("https://github.com/Zhiqiangcao/Rcode_OW_RMST/blob/main/RMST.functions.R")
 
 #determine true value of a0
 generatea0 <- function(prev, lower, upper, gamma, nsim=100){
