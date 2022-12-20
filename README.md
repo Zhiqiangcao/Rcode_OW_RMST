@@ -16,5 +16,5 @@ and asymmetric trimming weights.
 
 4. simu.main.fun.R is to reproduce simulation results of Tables 2-4 in paper.
 
-5. surv is the dataset used to demonstrate the proposed methods step-by-step in Web Appendix 3: R tutorial Section of supplementary material.
+5. surv.csv is the dataset used to demonstrate the proposed methods step-by-step in Web Appendix 3: R tutorial Section of supplementary material.
 
