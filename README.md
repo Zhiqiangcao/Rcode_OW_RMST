@@ -6,15 +6,15 @@ via the Overlap Weights " by Zhiqiang Cao and Fan Li (under review)
 For questions or comments about the code, please contact Zhiqiang Cao zcaoae@connect.ust.hk. You will need to change the directory to use the example 
 code in script. This folder includes the following functions:
 
-1. cal.true.value.sim.R is to calculate true values of IPTW, OW, IPTW with symmetric trimming and asymmetric trimming weights under each case for simulations 
+1. cal_true_value_sim.R is to calculate true values of IPTW, OW, IPTW with symmetric trimming and asymmetric trimming weights under each case for simulations 
 in paper, i.e., reproduce simulation results in Table 1 of paper.
 
-2. generate.web.fig1.R is to plot Web figure 1 of supplementary material.
+2. generate_web_fig1_R is to plot Web figure 1 of supplementary material.
 
-3. RMST.functions.R are related functions to calculate RMST and corresponding variance estimation based on IPTW, OW, IPTW with symmetric trimming 
+3. RMST_functions_R are related functions to calculate RMST and corresponding variance estimation based on IPTW, OW, IPTW with symmetric trimming 
 and asymmetric trimming weights.
 
-4. simu.main.fun.R is to reproduce simulation results of Tables 2-4 in paper.
+4. simu_main_fun.R is to reproduce simulation results of Tables 2-4 in paper.
 
 5. surv.csv is the dataset used to demonstrate the proposed methods step-by-step in Web Appendix 3: R tutorial Section of supplementary material.
 
