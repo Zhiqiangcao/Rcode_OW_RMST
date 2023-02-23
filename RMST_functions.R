@@ -396,13 +396,14 @@ IPTW.asym.RMST = function(L,w,x,z,time,delta,q,ps.model,ps.formula,censor.formul
 RMST.Effect.BW = function(Data,L,Treatment,SurvTime,Status,ps.formula,
                           censor.formula,Method="IPTW",alpha=0.1,q=0.01){
   # ps.formula = as.formula(paste(Treatment,"~",paste(Covariates,collapse="+"),sep=""))
-  # censor.formula = as.formula(paste("Surv(",SurvTime,",I(1-",Status,"))","~ -1 + ",paste(Covariates,collapse="+"),sep=""))
+  # censor.formula = as.formula(paste("Surv(",SurvTime,",I(1-",Status,"))","~ + ",paste(Covariates,collapse="+"),sep=""))
   # sort data by observed survival time
   data.sort = Data[order(Data[,SurvTime]),]
   Data = data.sort
   w = model.matrix(ps.formula,data=Data)
   colnames(w)=paste("W",1:dim(w)[2],sep="")
   x = model.matrix(censor.formula, data=Data)
+  x = x[,-1]
   colnames(x)=paste("x",1:dim(x)[2],sep="")
   z = as.numeric(Data[,Treatment])
   time = as.numeric(Data[,SurvTime])
