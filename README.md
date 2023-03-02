@@ -18,3 +18,6 @@ and asymmetric trimming weights.
 
 5. surv.csv is the dataset used to demonstrate the proposed methods step-by-step in Web Appendix 3: R tutorial Section of supplementary material.
 
+6. rhc.csv is the dataset used to analyze the RHC data set in Web Appendix 4: Right-Heart Catheterization Study Application.
+
+
