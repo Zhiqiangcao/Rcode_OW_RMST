@@ -11,7 +11,7 @@ in paper, i.e., reproduce simulation results in Table 1 of paper.
 
 2. generate_web_fig1.R is to plot Web figure 1 of supplementary material.
 
-3. RMST_functions_v1.R are related functions to calculate RMST and corresponding variance estimation based on IPTW, OW, IPTW with symmetric trimming 
+3. RMST_functions_v2.R are related functions to calculate RMST and corresponding variance estimation based on IPTW, OW, IPTW with symmetric trimming 
 and asymmetric trimming weights.
 
 4. simu_main_fun.R is to reproduce simulation results of Tables 2-4 in paper.
