@@ -6,18 +6,23 @@ via the Overlap Weights " by Zhiqiang Cao and Fan Li (under review)
 For questions or comments about the code, please contact Zhiqiang Cao zcaoae@connect.ust.hk. You will need to change the directory to use the example 
 code in script. This folder includes the following functions:
 
-1. cal_true_value_sim.R is to calculate true values of IPTW, OW, IPTW with symmetric trimming and asymmetric trimming weights under each case for simulations 
-in paper, i.e., reproduce simulation results in Table 1 of paper.
+1. cal_true_value_sim_manuscript.R and cal_true_value_appendix are to calculate true values of IPTW, OW, IPTW with symmetric trimming and asymmetric trimming weights, as well as IPTW with truncation wieghts under each case for simulations in paper, i.e., reproduce simulation results in Table 1 of paper and Web Table 5 of Web Appnedix.
 
 2. generate_web_fig1.R is to plot Web figure 1 of supplementary material.
 
-3. RMST_functions_v2.R are related functions to calculate RMST and corresponding variance estimation based on IPTW, OW, IPTW with symmetric trimming 
-and asymmetric trimming weights.
+3. RMST_functions_v3.R are related functions to calculate RMST and corresponding variance estimation based on IPTW, OW, IPTW with symmetric trimming 
+and asymmetric trimming weights, as well as IPTW with truncation weights.
 
-4. simu_main_fun.R is to reproduce simulation results of Tables 2-4 in paper.
+4. simu_main_fun_manuscript.R is to reproduce simulation results of Tables 2-4 in paper.
+   
+5. iptw_ow_bootstrap_variance_small_sample.R and iptw_ow_closed_variance_small_sample.R are to reproduce simulation results of Table 5 in paper.
 
-5. surv.csv is the dataset used to demonstrate the proposed methods step-by-step in Web Appendix 3: R tutorial Section of supplementary material.
+6. simu_main_fun_appendix.R is to reproduce simulation results of Web Tables 6-8 in paper.
 
-6. rhc.csv is the dataset used to analyze the RHC data set in Web Appendix 4: Right-Heart Catheterization Study Application.
+7. simu_main_fun_misspecification_appendix.R is to reproduce simulation results of Web Tables 9-11 in paper.
+
+8. surv.csv is the dataset used to demonstrate the proposed methods step-by-step in Web Appendix 3: R tutorial Section of supplementary material.
+
+9. rhc.csv is the dataset used to analyze the RHC data set in Web Appendix 4: Right-Heart Catheterization Study Application.
 
 
