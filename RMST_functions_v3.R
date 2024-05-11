@@ -474,10 +474,10 @@ RMST.Effect.BW = function(Data,L,Treatment,SurvTime,Status,ps.formula,
   x = model.matrix(censor.formula, data=Data)
   px = dim(x)[2]; 
   n = dim(x)[1]
-  if(px == 1){  #no covariate in censoring model
-    x = matrix(0,nrow=n) #then estimate of x will be NA in censored
+ if(px == 1){  #in this case, no covariate in censoring model, since x from model.matrix is a n*1 matrix 
+    x = x       #(intercept) with all values=1, then estimate of x (intercept) will be NA in Cox model (censored model) 
   }else{
-    x = matrix(x[,-1],ncol=px-1) #make sure x is a matrix
+    x = matrix(x[,-1],ncol=px-1) #delete the first column of x, since that is intercept and no intercept in Cox model (censord model)
   }
   px = dim(x)[2]
   colnames(x)=paste("x",1:dim(x)[2],sep="")
@@ -488,11 +488,10 @@ RMST.Effect.BW = function(Data,L,Treatment,SurvTime,Status,ps.formula,
   data = as.data.frame(cbind(x,w,z,time,delta))
   data.trt = subset(data,z==1)
   data.con = subset(data,z==0)
-  # propensity score
   # update ps.formula
   ps.formula = as.formula(paste("z~",paste(colnames(w),collapse = "+"),"-1",sep="")) #since w[,1] is the intercept term
   ps.model = glm(ps.formula,data=data,family=binomial(link="logit"))  #logistic model default including intercept term
-  ps = 1/(1+exp(-c(w %*% ps.model$coefficients))) 
+  # ps = 1/(1+exp(-c(w %*% ps.model$coefficients))) 
   # update censor.formula
   censor.formula = as.formula(paste("Surv(time, I(1-delta)) ~",paste(colnames(x),collapse = "+"),sep=""))
   cen.trt.model = coxph(censor.formula, data=data.trt)
