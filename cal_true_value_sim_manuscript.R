@@ -83,7 +83,7 @@ for(L in L_set){
       ###PS model
       e_pop <- plogis(c(cbind(1, xpop)%*%a))
       #by explicitly including the propensity score in m^{(1)}(X) and m^{(0)}(X)
-      lambda_trt <- exp(as.numeric(cbind(1,xpop) %*% c(-1,0.4,0.2,0.1,-0.1,-0.2,-0.3))+2*e_pop)
+      lambda_trt <- exp(as.numeric(cbind(1,xpop) %*% c(-1,0.4,0.2,0.1,-0.1,-0.2,-0.3))+3*e_pop)
       lambda_crl <- exp(as.numeric(cbind(1,xpop) %*% c(-1.4,0.0,-0.2,-0.3,-0.5,-0.6,-0.7))-e_pop)
       #for survial time
       upop_trt <- runif(N); upop_crl <- runif(N)
