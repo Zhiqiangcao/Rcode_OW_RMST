@@ -505,7 +505,7 @@ RMST.Effect.BW = function(Data,L,Treatment,SurvTime,Status,ps.formula,
     res = IPTW.sym.RMST(L=L,w,x,z,time,delta,px,q=alpha,ps.model,ps.formula,censor.formula)
   }else if (Method=="Asymmetric"){
     res = IPTW.asym.RMST(L=L,w,x,z,time,delta,px,q=q,ps.model,ps.formula,censor.formula)
-  }else if (Method=="Truncated"){
+  }else if (Method=="Truncation"){
     res = IPTW.trun.RMST(L,w,x,z,time,delta,px,q=alpha,ps.model,cen.trt.model,cen.con.model)
   }
   est = res$point
