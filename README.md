@@ -1,7 +1,6 @@
 # Rcode_OW_RMST
 
-The folders and the R code help to reproducing Tables 1-4 in the article "Addressing Extreme Propensity Scores in Estimating Restricted Mean Survival Time 
-via the Overlap Weights " by Zhiqiang Cao and Fan Li (under review)
+The folders and the R code help to reproducing Tables 1-4 in the article "1.	Zhiqiang Cao, Lama Ghazi, Claudia Mastrogiacomo, Laura Forastiere, F. Perry Wilson, Fan Li. Using overlap weights to address extreme propensity scores in estimating restricted mean counterfactual survival times. American Journal of Epidemiology, forthcoming, 2024(+)." 
 
 For questions or comments about the code, please contact Zhiqiang Cao zcaoae@connect.ust.hk. You will need to change the directory to use the example 
 code in script. This folder includes the following functions:
